@@ -83,14 +83,9 @@ bool ParqueEstacionamento::sair(const string & nome){
 }
 
 const ParqueEstacionamento& ParqueEstacionamento::operator+=(const ParqueEstacionamento & p2){
-	for(int i=0 ; i<p2.clientes.size() ; i++){
-		if(clientes.size()>=numMaximoClientes)	// chegamos à maxima lotacao
-			break;
-		string nomeCliente = p2.clientes.at(i).nome;
-		if(posicaoCliente(nomeCliente)==-1){ // cliente nao se encontra "inscrito" no parque 1
-				adicionaCliente(nomeCliente);
-		}
-	}
+	
+	for (int i=0 ; i<p2.clientes.size() ; i++)
+		adicionaCliente(p2.clientes.at(i).nome);
 
 	return *this;
 }
