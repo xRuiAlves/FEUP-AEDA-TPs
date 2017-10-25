@@ -1,0 +1,5 @@
+2.	a)	Espacial: Constante
+	  	Temporal: largura * altura * ntabs
+
+	b)	Espacial: Constante
+		Temporal: log(n)
