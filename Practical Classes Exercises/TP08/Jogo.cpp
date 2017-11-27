@@ -106,6 +106,8 @@ int Jogo::maisVisitado()
 	while (!it.isAtEnd()){
 		if (it.retrieve().getNVisitas() > num)
 			num = it.retrieve().getNVisitas();
+
+		it.advance();
 	}
 
 	return num;
